@@ -1,0 +1,55 @@
+.cities-wrapper {
+  padding: 75px 0 75px;
+
+  .cities-img {
+    padding: 35px 0 25px;
+    .cities-item {
+      padding-bottom: 20px;
+      position: relative;
+      a {
+        width: 100%;
+        &:before {
+          background-color: rgba(199, 235, 251, .5);
+          content: "";
+          top: 0;
+          right: 10px;
+          height: 239px;
+          width: 35px;
+          position: absolute;
+        }
+        img {
+          height: 239px;
+          width: 100%;
+
+        }
+        .cuisine-item-name {
+          position: absolute;
+          left: 25px;
+          bottom: 30px;
+          span {
+            color: $contrast-color;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .cities-list-wrapper .cities-list {
+    font-size: 0;
+    .cities-name {
+      width: 20%;
+      padding: 0;
+      a {
+        display: inline-block;
+        width: 100%;
+        &:hover {
+          background: $second-color;
+          color: $contrast-color;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+

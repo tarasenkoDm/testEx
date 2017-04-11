@@ -1,0 +1,31 @@
+.cuisine-wrapper {
+  padding: 83px 0 30px;
+
+  .cuisine-img {
+    padding: 35px 0 25px;
+    .cuisine-item {
+      padding-bottom: 20px;
+      position: relative;
+      .cuisine-item-name {
+        position: absolute;
+        left: 25px;
+        bottom: 30px;
+        span {
+          color: $contrast-color;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .cuisine-list .cuisine-name a {
+    display: inline-block;
+    width: 100%;
+
+    &:hover {
+      background: $second-color;
+      color: $contrast-color;
+      border-radius: 4px;
+    }
+  }
+}
