@@ -18,14 +18,17 @@
     }
   }
 
-  .cuisine-list .cuisine-name a {
-    display: inline-block;
-    width: 100%;
+  .cuisine-list .cuisine-name {
+    padding: 0 40px 0 0;
+    a {
+      display: inline-block;
+      width: 100%;
 
-    &:hover {
-      background: $second-color;
-      color: $contrast-color;
-      border-radius: 4px;
+      &:hover {
+        background: $second-color;
+        color: $contrast-color;
+        border-radius: 4px;
+      }
     }
   }
 }

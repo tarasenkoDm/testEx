@@ -33,20 +33,20 @@
       display: inline-block;
       width: 100%;
       .fa {
-        background: transparent;
+        background: $contrast-color;
         border-radius: 50%;
-        color: $contrast-color;
-        line-height: 40px;
+        color: $main-color;
+        line-height: 55px;
         text-align: center;
-        width: 40px;
+        width: 55px;
         &:hover {
-          background: $contrast-color;
-          color: $main-color;
+          background: $main-color;
+          color: $contrast-color;
         }
       }
     }
     .footer-copyright {
-      padding-top: 20px;
+      padding-top: 40px;
       .fa, span {
         color: $contrast-color;
         font-size: 16px;

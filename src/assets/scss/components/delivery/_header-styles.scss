@@ -1,97 +1,159 @@
 .header-wrapper {
   background: url("../img/header-pizza.jpg") no-repeat;
-  background-size: cover ;
-  //background-position: 50% 50%;
-  height:600px;
-  padding: 10px 37px 387px 18px;
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 10px 0 180px;
   text-align: center;
-  //width: 100%;
-
-
-  //background: url("../img/header-pizza.jpg") no-repeat;
-  //background-size: 100% ;
-  //padding: 10px 37px 387px 18px;
-  //text-align: center;
-
+  position: relative;
 
   &:before {
     background-color: rgba(0, 0, 0, .45);
     content: "";
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    right: 0;
+    bottom: 0;
     position: absolute;
   }
+}
 
-  .header {
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  color: $contrast-color;
+
+  .header-home {
+    border-radius: 7px;
+    padding: 12px 10px 10px;
+    span {
+      font: 700 30.39px $topic-font-family;
+    }
+  }
+  .header-home, .header-sign-in {
+    @media (max-width: 924px) {
+      transform: scale(0.7, 0.7);
+      transform-origin: 0;
+    }
+  }
+
+  .header-menu {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
-    position: relative;
-    z-index: 2;
 
-    .header-home {
-      border-radius: 7px;
-      padding: 12px 10px 10px;
-      p, span {
+    .menu-item {
+      position: relative;
+      vertical-align: middle;
+      .fa {
         color: $contrast-color;
-        font: 700 30.39px $topic-font-family;
+        @media (max-width: 767px) {
+          transform: scale(2, 2);
+          transform-origin: 0;
+        }
       }
       span {
+        color: $contrast-color;
+        font: 600 18px $body-font-family;
         text-transform: uppercase;
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
       }
     }
 
-    .header-menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      li {
-        position: relative;
-        vertical-align: middle;
-        a {
-          &:hover{
-            background: $second-color;
-            border-radius: 4px;
-          }
+    .header-sign-in-wrapper {
+      .fa {
+        display: none;
+        @media (max-width: 767px) {
+          display: inline-block;
         }
-        .fa {
-          color: $contrast-color;
-        }
-
       }
-
-      span {
-        color: $contrast-color;
-        font:600 18px $body-font-family;
-        text-transform: uppercase;
-      }
-
       .header-sign-in {
         border: 3px solid $contrast-color;
         border-radius: 6px;
         padding: 12px 40px;
+        @media (max-width: 767px) {
+          display: none;
+        }
       }
-
     }
-
-  }
-
-  .header-content {
-    padding-top: 100px;
-    position: relative;
-    z-index: 2;
   }
 }
 
-//@media (max-width: 1024px) {
-//  .header-wrapper {
-//    //background: url("../img/header-pizza-9.jpg") no-repeat;
-//    //background-size: cover ;
-//    height:400px;
-//    padding: 10px 37px 200px 18px;
-//    text-align: center;}
-//}
+.header-content {
+  padding-top: 100px;
+  position: relative;
+  z-index: 2;
+  h1 {
+    padding-bottom: 50px
+  }
+}
+
+.header-form {
+  .tabs {
+    background-color: rgba(0, 0, 0, .27);
+    margin: 0;
+    .tab {
+      cursor: pointer;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #7d7d7d;
+      border-right: 1px solid #7d7d7d;
+      &.active {
+        background-color: rgba(0, 0, 0, .4);
+        color: $contrast-color;
+        border-top: 2px solid #f5e314;
+        border-right: none;
+      }
+    }
+
+  }
+  .tabs-content {
+    background-color: rgba(0, 0, 0, .53);
+    padding: 10px;
+    .delivery-tab-content {
+      margin: 0;
+      .delivery-input-wrapper {
+        background-color: #fff;
+        padding: 10px 0 10px 0;
+        text-align: left;
+        input {
+          width: 100%;
+          border: none;
+          padding-left: 40px;
+          line-height: 30px;
+          background: url(../img/header-home.png) no-repeat scroll 5px;
+        }
+      }
+      .delivery-btn-wrapper {
+        background-color: #f5e314;
+        padding: 0;
+        border-bottom-right-radius: 7px;
+        border-top-right-radius: 7px;
+        .btn-find {
+          cursor: pointer;
+          font-weight: bold;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .pickup-tab-content {
+      color: $contrast-color;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

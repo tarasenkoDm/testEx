@@ -37,9 +37,9 @@
 
   .cities-list-wrapper .cities-list {
     font-size: 0;
+    width: 20%;
     .cities-name {
-      width: 20%;
-      padding: 0;
+      padding: 0 30px 0 10px;
       a {
         display: inline-block;
         width: 100%;
