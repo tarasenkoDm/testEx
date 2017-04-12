@@ -1,6 +1,6 @@
 .concept-wrapper {
   border-bottom: 1px solid #e2e2e2;
-  padding: 30px 0 63px;
+  padding: 30px 10px 63px;
 
   .concept-topic {
     padding: 127px 0 50px;
@@ -44,5 +44,14 @@
 @media (max-width: 640px) {
   .concept-wrapper .concept-topic {
     padding: 127px 0 0;
+  }
+}
+
+@media(max-width: 768px) {
+  .concept-wrapper {
+    padding-bottom: 30px;
+    .concept-list .item .fa-tablet{
+      top: 15px;
+    }
   }
 }

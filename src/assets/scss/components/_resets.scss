@@ -9,14 +9,13 @@ html, body {
   width: 100%;
 }
 
-
-p{
+p {
   color: $second-color;
-  font:400 18px $body-font-family;
+  font: 400 18px $body-font-family;
   margin: 0;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
   color: $main-color;
   font-weight: 600;
   margin: 0;
@@ -28,48 +27,61 @@ h1 {
   font: 600 50px $body-font-family;
 }
 
-h2{
-  font:700 39px $topic-font-family;
+h2 {
+  font: 700 39px $topic-font-family;
 }
 
-h3{
-  font:700 25.78px $topic-font-family;
+h3 {
+  font: 700 25px $topic-font-family;
   text-transform: uppercase;
 }
 
-ul{
-  margin:0;
-  li{
+ul {
+  margin: 0;
+  li {
     display: inline-block;
-    padding:  0 30px;
+    padding: 0 30px;
   }
 }
 
 a {
-  //color:$contrast-color;
   display: inline-block;
   font-size: 18px;
 }
 
-.btn{
+.btn {
   border: 5px solid $contrast-color;
   color: $contrast-color;
   text-align: center;
-
-  /* all - all in holder */
-  /* 0.5s - work time */
-  /* ease - style */
-  transition: all 0.3s ease;
+  transition: color 0.4s ease,
+              background 1.2s linear,
+              border 0.8s ease;
 }
 
-.btn:hover{
+.btn:hover {
   background: $second-color;
 }
 
-.bold{
+.bold {
   font-weight: 700;
 }
 
 .capitalized {
   text-transform: uppercase;
+}
+
+@media(max-width: 1190px) {
+  h2 {
+    text-align: center;
+  }
+}
+
+@media(max-width: 768px) {
+  h1{
+    font-size: 39px;
+  }
+  h2 {
+    font-size: 30px;
+    text-align: center;
+  }
 }

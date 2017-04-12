@@ -1,5 +1,5 @@
 .cities-wrapper {
-  padding: 75px 0 75px;
+  padding: 75px 0;
 
   .cities-img {
     padding: 35px 0 25px;
@@ -8,47 +8,78 @@
       position: relative;
       a {
         width: 100%;
+        position: relative;
         &:before {
           background-color: rgba(199, 235, 251, .5);
           content: "";
           top: 0;
-          right: 10px;
+          right: 0;
           height: 239px;
           width: 35px;
           position: absolute;
         }
-        img {
-          height: 239px;
+        &:hover:before {
+          background-color: rgba(0, 0, 0, .45);
+          top: 0;
+          left: 0;
+          height: 100%;
           width: 100%;
-
         }
-        .cuisine-item-name {
-          position: absolute;
-          left: 25px;
-          bottom: 30px;
-          span {
-            color: $contrast-color;
-            font-size: 25px;
-          }
+      }
+      img {
+        height: 239px;
+        width: 100%;
+
+      }
+      .cuisine-item-name {
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+        span {
+          color: $contrast-color;
+          font-size: 25px;
         }
       }
     }
   }
+}
 
-  .cities-list-wrapper .cities-list {
-    font-size: 0;
-    width: 20%;
-    .cities-name {
-      padding: 0 30px 0 10px;
-      a {
-        display: inline-block;
-        width: 100%;
-        &:hover {
-          background: $second-color;
-          color: $contrast-color;
-          border-radius: 4px;
-        }
+.cities-list-wrapper .cities-list {
+  font-size: 0;
+  width: 20%;
+  .cities-name {
+    padding: 0 30px 0 10px;
+    display: block;
+    a {
+      transition: background 0.5s ease,
+      color 0.5s ease;
+      &:hover {
+        background: $second-color;
+        color: $contrast-color;
+        border-radius: 4px;
       }
+    }
+  }
+}
+
+@media(max-width: 1190px) {
+  .cities-wrapper {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 924px) {
+  .cities-list-wrapper .cities-list {
+    width: 30%;
+    padding-bottom: 10px;
+  }
+}
+
+@media(max-width: 768px) {
+  .cities-wrapper {
+    padding: 20px 0;
+    .cities-list-wrapper .cities-list {
+      width: 50%;
     }
   }
 }

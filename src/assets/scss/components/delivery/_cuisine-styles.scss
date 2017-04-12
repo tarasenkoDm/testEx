@@ -6,10 +6,23 @@
     .cuisine-item {
       padding-bottom: 20px;
       position: relative;
+      a {
+        position: relative;
+        &:hover:before {
+          background-color: rgba(0, 0, 0, .45);
+          content: "";
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          position: absolute;
+        }
+      }
+
       .cuisine-item-name {
         position: absolute;
-        left: 25px;
-        bottom: 30px;
+        left: 15px;
+        bottom: 10px;
         span {
           color: $contrast-color;
           font-size: 25px;
@@ -18,17 +31,34 @@
     }
   }
 
-  .cuisine-list .cuisine-name {
-    padding: 0 40px 0 0;
-    a {
-      display: inline-block;
-      width: 100%;
-
-      &:hover {
-        background: $second-color;
-        color: $contrast-color;
-        border-radius: 4px;
+  .cuisine-list {
+    .cuisine-name {
+      padding: 0 40px 0 0;
+      display: block;
+      a {
+        transition: background 0.5s ease,
+        color 0.5s ease;
+        &:hover {
+          background: $second-color;
+          color: $contrast-color;
+          border-radius: 4px;
+        }
       }
+    }
+  }
+}
+
+@media (max-width: 924px) {
+  .cuisine-list {
+    padding-bottom: 10px;
+  }
+}
+
+@media(max-width: 768px) {
+  .cuisine-wrapper {
+    padding: 20px 0;
+    .cuisine-img {
+      padding: 20px 0;
     }
   }
 }
